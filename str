@@ -1,0 +1,23 @@
+#include <iostream>
+#include <windows.h>
+#include <string.h>
+
+int main(int argc, char* argv[]){
+    static const char nolet[] = "\t\n,;:!?-_ ";
+    SetConsoleOutputCP(CP_UTF8);
+    char str[100] = "Hello my Name is Daniiiiiiiil"; char* maxw = NULL; int maxl = 0;
+
+    for (char* w = strtok(str, nolet); w != NULL; w = strtok(nullptr, nolet)){
+        int l = strlen(w);
+
+        if (l > maxl){
+            maxl = l;
+            maxw = w;
+        }
+    }
+
+    std::cout << "Самое длинное слово - " << maxw << std::endl;
+    std::cout << "Его длина - " << maxl << " символов." << std::endl;
+
+    return 0;
+}
