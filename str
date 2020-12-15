@@ -3,7 +3,7 @@
 #include <string.h>
 
 int main(int argc, char* argv[]){
-    static const char nolet[] = "\t\n,;:!?-_ ";
+    static const char nolet[] = "\t\n,;:!?-_<>^. ";
     SetConsoleOutputCP(CP_UTF8);
     char str[100] = "Hello my Name is Daniiiiiiiil"; char* maxw = NULL; int maxl = 0;
 
